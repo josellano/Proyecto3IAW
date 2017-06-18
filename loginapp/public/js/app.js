@@ -6,7 +6,7 @@ var app = angular.module('meanMapApp', ['addCtrl', 'queryCtrl', 'listCtrl', 'geo
 
         // Join Team Control Panel
         $routeProvider.when('/add', {
-            controller: 'addCtrl', 
+            controller: 'addCtrl',
             templateUrl: 'partials/addForm.html',
 
         // Find Teammates Control Panel
@@ -20,5 +20,5 @@ var app = angular.module('meanMapApp', ['addCtrl', 'queryCtrl', 'listCtrl', 'geo
             templateUrl: 'partials/listForm.html',
 
         // All else forward to the Join Team Control Panel
-        }).otherwise({redirectTo:'/add'})
+      }).otherwise({redirectTo:'/find'})
     });

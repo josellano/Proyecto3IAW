@@ -330,7 +330,7 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
+
 
 }
 
@@ -356,7 +356,7 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 100px;
+        padding-top: 5%;
     }
     header .intro-text .intro-lead-in {
         margin-bottom: 10px;
@@ -906,11 +906,14 @@ body {
     /* La imagen de fondo no se repite */
     background-repeat: no-repeat;
 
-
+ background-attachment: fixed;
     /* La imagen de fondo se reescala cuando se cambia el ancho de ventan
        del navegador */
     background-size: cover;
     background-size: 100%;
+
+
+
 }
 
 
@@ -1009,4 +1012,24 @@ END: LOADING ICON FOR LOGGING OUT USER
 
 .headSeparator{
   padding-top: 8%;
+}
+
+.loginErrorsPanel{
+    text-align: center;
+    border-color: red;
+    color: red;
+
+}
+
+
+
+
+form input[type="text"]:required:valid{
+ border:2px solid green;
+ /* otras propiedades */
+}
+/*caso contrario, el color sera rojo*/
+form input[type="text"]:focus:required:invalid{
+ border:2px solid red;
+ /* otras propiedades */
 }

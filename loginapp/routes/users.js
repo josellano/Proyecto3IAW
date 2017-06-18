@@ -32,7 +32,7 @@ router.post('/register', function(req, res){
 	req.checkBody('password', 'Password is required').notEmpty();
 	req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
 
-	var errors = req.validationErrors();
+	var errors = req.validationErrors();	
 
 	if(errors){
 		res.render('register',{
@@ -49,7 +49,7 @@ router.post('/register', function(req, res){
 
 		User.createUser(newUser, function(err, user){
 			if(err) throw err;
-			console.log(user);
+
 		});
 
 		req.flash('success_msg', 'You are registered and can now login');
@@ -63,7 +63,7 @@ passport.use(new LocalStrategy(
    User.getUserByUsername(username, function(err, user){
    	if(err) throw err;
    	if(!user){
-   		return done(null, false, {message: 'Unknown User'});
+   		return done(null, false, {message: 'El usuario no existe'});
    	}
 
    	User.comparePassword(password, user.password, function(err, isMatch){
@@ -87,10 +87,11 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-router.post('/login',
-  passport.authenticate('local', {successRedirect:'/map', failureRedirect:'/users/login',failureFlash: true}),
+router.post('/login', passport.authenticate('local', {successRedirect:'/map', failureRedirect:'/users/login',failureFlash: true}),
   function(req, res) {
-    res.redirect('/map');
+
+			res.redirect('/map');
+
   });
 
 router.get('/logout', function(req, res){

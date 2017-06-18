@@ -1,14 +1,13 @@
-<div class="headSeparator">
-    <link rel="stylesheet" href="../public/css/bootstraporiginal.css" />
+<link rel="stylesheet" href="../public/css/bootstraporiginal.css" />
   <div class="container">
       <div class="header">
           <ul class="nav nav-pills pull-right">
               <!-- Links to the two menu views included -->
               {{#ifCond user.tipo 'admin'}}
-              <li active><a href="/#/add">Agregar</a></li>
+              <li active><a href="#/add">Agregar</a></li>
               {{/ifCond}}
-              <li disabled><a href="/#/list">Cervecerias</a></li>
-              <li disabled><a href="/#/find">Buscar</a></li>
+              <li disabled><a href="#/list">Cervecerias</a></li>
+              <li disabled><a href="#/find">Buscar</a></li>
           </ul>
           <h3 class="text-muted">Birreando con Amigos</h3>
       </div>
@@ -29,5 +28,3 @@
               <a href="https://github.com/">Github</a></p>
       </div>
 </div>
-
-</div><!--/headSeparator-->

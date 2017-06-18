@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="../public/css/bootstrap.css" />
 	<link rel="stylesheet" href="../public/css/style.css" />
 	<link rel="stylesheet" href="../public/css/animate.css" />
-	<link rel="stylesheet" href="../public/css/styleIndex.css"/>
 	{{#each scripts}}
   <script src="{{script}}"></script>
 	{{/each}}
@@ -66,22 +65,11 @@
 
 	<div class="row">
 		<div class="col-lg-12">
-			{{#if success_msg}}
-				<div class="alert alert-success">{{success_msg}}</div>
-			{{/if}}
-
-			{{#if error_msg}}
-				<div class="alert alert-danger">{{error_msg}}</div>
-			{{/if}}
-
-			{{#if error}}
-				<div class="alert alert-danger">{{error}}</div>
-			{{/if}}
-
-			{{{body}}}
-		</div>
+			<div class="headSeparator">
+					{{{body}}}
+			</div>
 	</div>
-
+</div>
 </body>
 <footer class="footer">
 
