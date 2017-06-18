@@ -99,6 +99,7 @@ app.use(express.static(__dirname + '/public'));                 // sets the stat
 app.use('/public/css',express.static(path.join(__dirname, '/public/css')));
 app.use('/public/source',express.static(path.join(__dirname, '/public/source')));
 app.use('/public/fonts',express.static(path.join(__dirname, '/public/fonts')));
+app.use('/public/partials',express.static(path.join(__dirname, '/public/partials')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components')); // Use BowerComponents
 app.use(morgan('dev'));                                         // log with Morgan
 app.use(bodyParser.json());                                     // parse application/json

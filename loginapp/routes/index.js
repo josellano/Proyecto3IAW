@@ -21,8 +21,11 @@ var scripts = [
 								{script: '../../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js'},
 								{script: '../../js/app.js'},
 								{script: '../../js/addCtrl.js'},
-								{script: '../../js/gservice.js'}
+								{script: '../../js/gservice.js'},
+								{script: '../../js/queryCtrl.js'},
+								{script: '../../js/listCtrl.js'}
 							];
+
 
 
 
