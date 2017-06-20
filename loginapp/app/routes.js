@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     // GET Routes
     // --------------------------------------------------------
-    // Retrieve records for all users in the db
+    // Retrieve records for all breweries in the db
     app.get('/breweries', function(req, res){
 
         // Uses Mongoose schema to run the search (empty conditions)
@@ -19,6 +19,21 @@ module.exports = function(app) {
 
             // If no errors are found, it responds with a JSON of all breweries
             res.json(breweries);
+        });
+    });
+
+    // Retrieve records for id brewery in the db
+    app.get('/breweries/:id', function(req, res){
+
+        // Uses Mongoose schema to run the search with id
+        var id = req.params.id;
+        var query = Brewery.findOne({'_id':id});
+        query.exec(function(err, brewery){
+            if(err)
+                res.send(err);
+
+            // If no errors are found, it responds with a JSON of all breweries
+            res.json(brewery);
         });
     });
 

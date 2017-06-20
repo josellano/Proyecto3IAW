@@ -7,6 +7,9 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
     $scope.formData = {};
     var queryBody = {};
 
+    geolocation.getLocation().then(function(data){
+        gservice.refresh(-38.718, -62.266);
+    });
     // Functions
     // ----------------------------------------------------------------------------
     // Get coordinates based on mouse click. When a click event is detected....
@@ -43,7 +46,7 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
 
                 // Count the number of records retrieved for the panel-footer
                 $scope.queryCount = queryResults.length;
-            
+
                 // Pass the filtered results to the Google Map Service and refresh the map
                 gservice.refresh(queryBody.latitude, queryBody.longitude, queryResults);
             })

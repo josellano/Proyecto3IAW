@@ -13,18 +13,19 @@ router.get('/', function(req, res){
 
 
 var scripts = [
-								{script: '../../bower_components/modernizr/bin/modernizr'},
-								{script: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC7V_S7S7iFLGfvxeOrnGqP9SdcZJSAK00'},
-								{script: '../../bower_components/angular/angular.js'},
-								{script: '../../bower_components/angular-route/angular-route.js'},
-								{	script: '../../bower_components/jquery/dist/jquery.js'},
-								{script: '../../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js'},
-								{script: '../../js/app.js'},
-								{script: '../../js/addCtrl.js'},
-								{script: '../../js/gservice.js'},
-								{script: '../../js/queryCtrl.js'},
-								{script: '../../js/listCtrl.js'}
-							];
+				{script: '../../bower_components/modernizr/bin/modernizr'},
+				{script: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC7V_S7S7iFLGfvxeOrnGqP9SdcZJSAK00'},
+				{script: '../../bower_components/angular/angular.js'},
+				{script: '../../bower_components/angular-route/angular-route.js'},
+				{script: '../../bower_components/jquery/dist/jquery.js'},
+				{script: '../../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js'},
+				{script: '../../js/app.js'},
+				{script: '../../js/addCtrl.js'},
+				{script: '../../js/gservice.js'},
+				{script: '../../js/queryCtrl.js'},
+				{script: '../../js/listCtrl.js'},
+				{script: '../../js/infoCtrl.js'}
+			];
 
 
 
@@ -54,6 +55,7 @@ function ensureAdmin(req, res, next){
 		res.redirect('/map');
 	}
 }
+
 
 Handlebars.registerHelper('ifCond', function(v1, v2, options) {
   if(v1 === v2) {

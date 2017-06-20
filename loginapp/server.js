@@ -14,7 +14,7 @@ var mongoose = require('mongoose');
 var morgan= require('morgan');
 var methodOverride  = require('method-override');
 //var modernizr = require("modernizr");
-
+mongoose.Promise = global.Promise;  // para sacar el warning
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
 

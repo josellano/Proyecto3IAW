@@ -1,6 +1,8 @@
 <!-- Find Breweries (Query) Form -->
-<div class="col-md-5">
-
+<div class="col-md-7">
+    <div id="map" style="width:645px; height:645px"></div>
+</div>
+<div class="col-lg-5">
     <!-- Creates Main Panel -->
     <div class="panel panel-default">
 
@@ -20,11 +22,11 @@
                     <label for="distance">Distancia max (m)</label>
                     <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display: none">
                     <label for="latitude">Tu Latitud</label>
                     <input type="text" class="form-control" id="latitude" placeholder="-38.718" ng-model="formData.latitude" readonly>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display: none">
                     <label for="longitude">Tu Longitud</label>
                     <input type="text" class="form-control" id="longitude" placeholder="-62.266" ng-model="formData.longitude" readonly>
                 </div>

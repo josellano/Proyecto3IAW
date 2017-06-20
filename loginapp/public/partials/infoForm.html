@@ -1,0 +1,23 @@
+
+    <!-- Creates Main Panel -->
+    <div class="panel panel-default">
+
+        <!-- Panel Title -->
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">Información</h2>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="panel-body">
+            <h2>{{ cerveceria.name }}</h2>
+            <br>
+            <h3>Encuentranos en {{ cerveceria.street }}</h2>
+            <h3>Puedes llamar a {{ cerveceria.tel }} para hacer reservas y/o consultas</h2>
+            <h3>¿Que cuándo es nuestro Happy Hour?</h2>
+            <p>Pues de {{ cerveceria.happyHour[0] }} a {{ cerveceria.happyHour[1] }} ¡No te lo pierdas!</p>
+            <br>
+            <p>Sitio Web: {{ cerveceria.site }}</p>
+            <br>
+            <a href="#/list" ><input type="submit" name="button" value="Volver"/><a/>
+        </div>
+    </div>

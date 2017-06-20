@@ -19,13 +19,14 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "~2.1.2",
     "mongodb": "*",
     "mongoose": "*",
+    "mongoose-data-seed": "^1.0.0",
     "morgan": "~1.2.2",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*",
-    "jsonwebtoken": "^5.0.2",
-    "method-override": "~2.1.2"
+    "passport-local": "*"
   }
 }

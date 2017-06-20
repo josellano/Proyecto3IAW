@@ -6,14 +6,16 @@ var Schema      = mongoose.Schema;
 var BrewerySchema = new Schema({
     name: {type: String, required: true},
     street: {type: String, required: true},
-    snumber: {type: Number, required: true},
     tel: {type: Number, required: true},
     site: {type: String, default: "Todavia no..."},
     location: {type: [Number], required: true}, // [Long, Lat]
     /*
-    horariosOC: [[String]], //Array of object (days) with array of time of open-close
+    horariosOC: [[String]], //Array of arrays (days) with array of time open-close
     */
+    happyHour: {type: [String], required: true},
+    /*
     comentarios: {type: [String], default: []},
+    */
     created_at: {type: Date, default: Date.now},
     updated_at: {type: Date, default: Date.now}
 });

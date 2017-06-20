@@ -1,6 +1,7 @@
-<!-- "Cervecerias" -->
-<div class="col-md-5">
-
+<div class="col-md-7">
+    <div id="map" style="width:645px; height:645px"></div>
+</div>
+<div class="col-lg-5">
     <!-- Creates Main Panel -->
     <div class="panel panel-default">
 
@@ -20,10 +21,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="cerveceria in cervecerias" style="cursor:pointer">
-                <td> {{ cerveceria.name }} </td>
-                <td> {{ cerveceria.street }} {{ cerveceria.snumber }} </td>
-                <td> {{ cerveceria.tel }} </td>
+              <tr ng-repeat="cerveceria in cervecerias" style="cursor:pointer" ng-click="showBrewery(cerveceria._id)">
+                  <td> {{ cerveceria.name }} </td>
+                  <td> {{ cerveceria.street }} </td>
+                  <td> {{ cerveceria.tel }} </td>
               </tr>
             </tbody>
           </table>

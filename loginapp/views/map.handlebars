@@ -1,30 +1,33 @@
+
+
 <link rel="stylesheet" href="../public/css/bootstraporiginal.css" />
+
+
   <div class="container">
       <div class="header">
           <ul class="nav nav-pills pull-right">
               <!-- Links to the two menu views included -->
               {{#ifCond user.tipo 'admin'}}
-              <li active><a href="#/add">Agregar</a></li>
+              <li disabled><a href="#/add">Agregar</a></li>
+              <li disabled><a href="#/less">Quitar</a></li>
+              <li disabled><a href="#/edit">Editar</a></li>
               {{/ifCond}}
-              <li disabled><a href="#/list">Cervecerias</a></li>
+              <li active ><a href="#/list">Cervecerias</a></li>
               <li disabled><a href="#/find">Buscar</a></li>
           </ul>
-          <h3 class="text-muted">Birreando con Amigos</h3>
       </div>
       <!-- Map and Side Panel -->
       <div class="row content">
           <!-- Google Map -->
-          <div class="col-md-7">
-              <div id="map" style="width:645px; height:645px"></div>
-          </div>
-          <!-- Side Panel - Now Handled by ng-view -->
-          <div ng-view></div>
 
+          <div ng-view></div>
       </div>
-      <hr/>
+
+      <hr>
       <!-- Footer -->
-      <div class="footer">
-          <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Scarlato Nahuel & Llano Jose -
-              <a href="https://github.com/">Github</a></p>
-      </div>
+            <div class="footer">
+                <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Scarlato Nahuel & Llano Jose</p>
+            </div>
+
+
 </div>

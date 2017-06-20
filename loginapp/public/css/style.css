@@ -53,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
+
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
@@ -240,6 +240,7 @@ fieldset[disabled] .btn-xl.active {
     /*    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;*/
     font-family: 'Roboto', sans-serif;
     color: white;
+    background-color:transparent;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -1020,8 +1021,6 @@ END: LOADING ICON FOR LOGGING OUT USER
     color: red;
 
 }
-
-
 
 
 form input[type="text"]:required:valid{
