@@ -1,0 +1,30 @@
+
+    <!-- Creates Main Panel -->
+    <div class="panel panel-default">
+
+        <!-- Panel Title -->
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">¿Alguna de estas es la que buscas? </h2>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="panel-body">
+          <label>Filtrar</label> <input class="filtro" type="text" data-ng-model="filtro"/>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Telefono</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="cerveceria in cervecerias | orderBy:'name' | filter:filtro" style="cursor:pointer" ng-click="showBrewery(cerveceria._id)">
+                  <td> {{ cerveceria.name }} </td>
+                  <td> {{ cerveceria.street }} </td>
+                  <td> {{ cerveceria.tel }} </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="meanMapApp">
+<head>
+	<title>Cervecerias</title>
+	<link rel="icon" type="image/png" href="../public/source/beerIcon.png" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<link rel="stylesheet" href="../public/css/bootstrap.css" />
+	<link rel="stylesheet" href="../public/css/style.css" />
+	<link rel="stylesheet" href="../public/css/animate.css" />
+	{{#each scripts}}
+  <script src="{{script}}"></script>
+	{{/each}}
+
+</head>
+<header>
+<div class="container">
+		<div class="header clearfix">
+				<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+						<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header page-scroll">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand page-scroll">Cervecerias</a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+								{{#if user}}
+
+											
+											<li class="">
+													<a href="/users/logout">Logout</a>
+											</li>
+								{{else}}
+										<li class="hidden active">
+												<a href="#page-top"></a>
+										</li>
+										<li class="">
+												<a href="/users/login">Management</a>
+										</li>
+
+										<!--li class="">
+												<a href="/users/register">Register</a>
+										</li-->
+
+
+									{{/if}}
+								</ul>
+						</div>
+						</div> <!-- /.container-fluid -->
+				</nav><!-- /.navbar-collapse -->
+		</div>
+</div> <!-- /container -->
+</header>
+<body>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="headSeparator">
+			{{{body}}}
+		</div>
+	</div>
+</div>
+</body>
+<footer class="footer">
+
+</footer>
+</html>
