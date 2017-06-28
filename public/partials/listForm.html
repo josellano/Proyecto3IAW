@@ -13,13 +13,18 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                <th>Nombre</th>
-                <th>Dirección</th>
-                <th>Telefono</th>
+                <th ng-click="sortBy('name')">Nombre
+                  <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+                </th>
+                <th ng-click="sortBy('street')">Dirección
+                  <span class="sortorder" ng-show="propertyName === 'street'" ng-class="{reverse: reverse}"></span></th>
+                <th ng-click="sortBy('tel')">Telefono
+                  <span class="sortorder" ng-show="propertyName === 'tel'" ng-class="{reverse: reverse}"></span>
+                </th>
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="cerveceria in cervecerias | orderBy:'name' | filter:filtro" style="cursor:pointer" ng-click="showBrewery(cerveceria._id)">
+              <tr ng-repeat="cerveceria in cervecerias | orderBy:propertyName:reverse | filter:filtro" style="cursor:pointer" ng-click="showBrewery(cerveceria._id)">
                   <td> {{ cerveceria.name }} </td>
                   <td> {{ cerveceria.street }} </td>
                   <td> {{ cerveceria.tel }} </td>

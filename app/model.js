@@ -13,9 +13,6 @@ var BrewerySchema = new Schema({
     horariosOC: [[String]], //Array of arrays (days) with array of time open-close
     */
     happyHour: {type: [String], required: true},
-    /*
-    comentarios: {type: [String], default: []},
-    */
     created_at: {type: Date, default: Date.now},
     updated_at: {type: Date, default: Date.now}
 });
